@@ -1,0 +1,8 @@
+Client:
+
+https://github.com/mkaring/ConfuserEx/releases/
+Embed DLL's in one repo something.
+Networking that supports .NET Core 3.1 & .NET framework 4.5.1
+
+
+Admin  & Server TBA
