@@ -1,19 +1,10 @@
 Client:
 
-https://github.com/mkaring/ConfuserEx/releases/
 https://github.com/onSec-fr/Http-Asynchronous-Reverse-Shell\
 Embed DLL's in one repo something.
 Networking that supports .NET Core 3.1 & .NET framework 4.5.1
 
-More for client:
-Also once the payload is done, do some serial communication between arduino or something. Like as long as arduino is connected theres also a bluetooth 
-device available, connect to the arduino over bluetooth and send strings which are actually commands. But what will happen is arduino will receive
-the bluetooth string/commands and forward it to the serial communication in the payload/malware and execute commands through it so INTERNET is NOT really
-needed.
-
-basically in topological figure: Client.exe <- Arduino <- Bluetooth
-goes both ways, arduino forwards all serial input/output to bluetooth as well.
-can maybe do the same for wifi... but how do we send over wifi lol maybe we need webserver
+we gotta hide from av's, try http async reverse shell or smth mmm cant do anything now
 
 Admin  & Server TBA
 
