@@ -1,5 +1,7 @@
 Client:
 
+DISGUISE AS REALTEK AUDIO THING RATHER THAN DWM 
+
 https://github.com/onSec-fr/Http-Asynchronous-Reverse-Shell\
 Embed DLL's in one repo something.
 Networking that supports .NET Core 3.1 & .NET framework 4.5.1
